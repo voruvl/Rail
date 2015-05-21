@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0px;
+	
+}
+
+#header {
+	width: 900px;
+	height: 250px;
+	position: absolute;
+	border: inset 3px gray;
+}
+
+#menu {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	border: solid 3px gray ;
+	top: 250px;
+	background: #f5acd1;
+}
+
+#content {
+	width: 700px;
+	height: 300px;
+	position: absolute;
+	left: 200px;
+	border: solid 3px gray;
+	top: 250px;
+	background: #feffc6;
+}
+#footer {
+	width: 900px;
+	height: 30px;
+	position: absolute;
+	top: 550px;
+	border: inset 3px gray;
+	background: #cef8f2;
+}
