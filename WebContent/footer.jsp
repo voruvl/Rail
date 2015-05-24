@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body style="background: #a2d9ff">
- <a href="">Главная страница</a> <a href="">Заказ
-			билетов</a> <a href="">О нас</a> <a href="">Вакансии</a>
+ <a href="content.jsp" target="content">Main page</a> <a href="">Order tickets</a> 
+ 
 	
 <br>
 

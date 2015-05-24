@@ -3,33 +3,24 @@
 <!DOCTYPar E html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<script type="text/javascript">
-	function openLocation(page) {
-		// 		alert("sdsddf");
-		parent.content.location.href = page;
-	}
-	function openWin() {
-		wind = open("http:\\www.mail.ru");
-	}
-</script>
+
 </head>
 <body style="background: #f5acd1">
 
-	<h3>
-		<p style="color: red">Main menu</p>
-	</h3>
+	<h5>
+		<p style="color: red">Menu for admin</p>
+	</h5>
+	
+	<a href="createSheduleTrain.jsp" target="content">Create train</a>
 	<br>
-	<a href="createSheduleTrain.jsp" target="content">Create train shedule</a>
-	<br>
-	<a href="sheduleTrain.jsp" target="content">Shedule train</a>
+	<a href="sheduleTrain.jsp" target="content">Edit route train</a>
 	<br>
 	<a href="Route.jsp" target="content">Route train</a>
 	<br>
-	<a href="javascript:openLocation('orderTicket.jsp')">Order tickets</a>
-	
-	
-	
-	
+	<h5>
+		<p style="color: green">Menu for user</p>
+	</h5>
+	<a href="orderTicket.jsp" target="content">Order tickets</a>
 	<br>
 
 </body>

@@ -1,49 +1,44 @@
+
 <%@page import="jacl.Train"%>
-<%@page import="jacl.Trains"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<jsp:useBean id="t1" class="jacl.Trains" scope="session" />
+
+<jsp:useBean id="routers" class="jacl.Routers" scope="session" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	
-		
-		
-	</script>
-	<b> <font color="#ff3400">Train shedule:
+	<b> <font color="#ff3400">Add to selected train stations:
 
-			<hr> 
+			<hr> List train <br> <%
+ 	Train train = new Train();
+ 	try {
+ 		train.setNumer(Integer.parseInt(request.getParameter("numer")));
+ 		train.setFirstStation(request.getParameter("fstation")
+ 				.toUpperCase());
+ 		train.setLastStation(request.getParameter("lstation")
+ 				.toUpperCase());
+ 		train.setTime(request.getParameter("time"));
+ 		routers.addRoute(train);
 
-			<%
-				out.write("Numer" + "\t");
-				out.write("First station" + "\t");
-				out.write("Last station" + "\t");
-				out.write("Time");
-			%> <br> <%
- 	for (int i = 0; i < t1.count(); i++) {
- 		request.setAttribute("train", t1.getTrain(i));
- %> <a href=<%request.setAttribute("train", t1.getTrain(i)); %>/"route.jsp" >
-				<%
-				
-					out.write("" + t1.getTrain(i).getNumer() + "\t");
-						out.write(t1.getTrain(i).getFirstStation() + "\t");
-						out.write(t1.getTrain(i).getLastStation() + "\t");
-						out.write(t1.getTrain(i).getTime() + "\t");
-				%> <br> <%
+ 	} catch (Exception e) {
+
+ 	}
+ 	for (int i = 0; i < routers.count(); i++) {
+ %> <a href="createStation.jsp?trainId=<%=i%>"> <%
+ 	out.write("" + routers.getTrain(i).getNumer() + "\t");
+ 		out.write(routers.getTrain(i).getFirstStation() + "\t");
+ 		out.write(routers.getTrain(i).getLastStation() + "\t");
+ 		out.write(routers.getTrain(i).getTime() + "\t");
+ %> <br> <%
  	}
  %>
 		</a>
 	</font>
 	</b>
 	<hr>
-
-	</font>
-	</b>
-	<hr>
-
 </body>
 </html>

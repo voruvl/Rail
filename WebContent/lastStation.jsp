@@ -13,20 +13,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<font color="green"> <b>Entering new order, selected train </b></font>
-
-	<hr color="green">
 	<%
-			for (int i = 0; i < routers.count(); i++) {
-%>
-	<a href="firstStation.jsp?trainId=<%=i%>"> <%
- 	Train train = routers.getTrain(i);
- 		out.write("" + train.getNumer() + "\t");
- 		out.write(train.getFirstStation() + "\t");
- 		out.write(train.getLastStation() + "\t");
- 		out.write(train.getTime() + "\t");
- %><br> <%
+		index = Integer.parseInt(request.getParameter("trainId"));
+		int first = Integer.parseInt(request.getParameter("first"));
+		Train train = routers.getTrain(index);
+		for (int i = first + 1; i < train.getStations().size(); i++) {
+	%>
+	<a href="showOrder.jsp?trainId=<%=index%>&first=<%=first%>&last=<%=i%>"> <%
+ 	Station station = train.getStations().get(i);
+ 		out.write(station.getNameStation() + "\t");
+ 		out.write("" + station.getPrice() + "\t");
+ %> <br> <%
  	}
  %>
+	</a>
 </body>
 </html>
