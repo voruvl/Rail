@@ -7,7 +7,7 @@
 <head>
 <%!int index;%>
 
-<jsp:useBean id="routers" class="jacl.Routers" scope="session" />
+<jsp:useBean id="routers" class="jacl.Routers" scope="application" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>

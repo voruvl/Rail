@@ -3,8 +3,8 @@ package jacl;
 public class Order {
 
 	private Train train;
-	private Station firstStation;
-	private Station lastStation;
+	private int firstStation;
+	private int lastStation;
 
 	public Train getTrain() {
 		return train;
@@ -14,19 +14,19 @@ public class Order {
 		this.train = train;
 	}
 
-	public Station getFirstStation() {
+	public int getFirstStation() {
 		return firstStation;
 	}
 
-	public void setFirstStation(Station firstStation) {
+	public void setFirstStation(int firstStation) {
 		this.firstStation = firstStation;
 	}
 
-	public Station getLastStation() {
+	public int getLastStation() {
 		return lastStation;
 	}
 
-	public void setLastStation(Station lastStation) {
+	public void setLastStation(int lastStation) {
 		this.lastStation = lastStation;
 	}
 }

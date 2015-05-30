@@ -5,21 +5,29 @@
 <html>
 <head>
 
-<jsp:useBean id="routers" class="jacl.Routers" scope="session" />
+<jsp:useBean id="routers" class="jacl.Routers" scope="application" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+function setfocus() {
+	document.form.numer.select();
+	document.form.numer.focus();
+}
+</script>
 <title>Insert title here</title>
 </head>
-<body>
+<body onload="javascript:setfocus()">
 	<center>
 		<font color="green"> <b>Entering new train </b></font>
 	</center>
 	<hr color="green">
-	<form action="sheduleTrain.jsp" method="get">
+	<form action="sheduleTrain.jsp" name="form" method="get">
 		<b>Numer train:</b><br> <input type="text" name="numer" value=""><br>
 		<b>First station:</b><br> <input type="text" name="fstation"
 			value=""><br> <b>Last station:</b><br> <input
 			type="text" name="lstation" value=""><br> <b>Time
-			train:</b><br> <input type="text" name="time" value=""><br>
+			train:</b><br> 
+		
+			<input type="time" name="time" value=""><br>
 		<input type="submit" value="Insert">
 		
 	</form>

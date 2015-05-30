@@ -7,7 +7,7 @@
 <head>
 <%!int index;%>
 
-<jsp:useBean id="routers" class="jacl.Routers" scope="session" />
+<jsp:useBean id="routers" class="jacl.Routers" scope="application" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -19,11 +19,12 @@
 		Train train = routers.getTrain(index);
 		for (int i = first + 1; i < train.getStations().size(); i++) {
 	%>
-	<a href="showOrder.jsp?trainId=<%=index%>&first=<%=first%>&last=<%=i%>"> <%
- 	Station station = train.getStations().get(i);
- 		out.write(station.getNameStation() + "\t");
- 		out.write("" + station.getPrice() + "\t");
- %> <br> <%
+	<a href="showOrder.jsp?trainId=<%=index%>&first=<%=first%>&last=<%=i%>">
+		<%
+			Station station = train.getStations().get(i);
+				out.write(station.getNameStation() + "\t");
+				out.write("" + station.getPrice() + "\t");
+		%> <br> <%
  	}
  %>
 	</a>

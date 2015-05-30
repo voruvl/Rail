@@ -1,7 +1,7 @@
 package jacl;
 
 public class Station {
-private String nameStation;
+	private String nameStation;
 	private int price;
 
 	public String getNameStation() {

@@ -5,13 +5,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <frameset rows="13%,80%,10%" border="1">
-	<frame name="header" src="header.jsp" title="header">
+	<frame src="jsp/header.jsp" name="header"  title="header">
 
 	<frameset cols="18%,90%" border="1">
-		<frame src="menu.jsp" name="menu" title="menu">
-		<frame name="content" src="content.jsp" title="content">
+		<frame src="jsp/menu.jsp" name="menu" title="menu">
+		<frame  src="jsp/content.jsp" name="content" title="content">
 	</frameset>
-	<frame name="footer" src="footer.jsp" title="footer">
+	<frame  src="jsp/footer.jsp" name="footer"title="footer">
 </frameset>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

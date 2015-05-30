@@ -10,18 +10,20 @@
 	<h5>
 		<p style="color: red">Menu for admin</p>
 	</h5>
-	
+<a href="http://mail.ru" target="header">mail.ru</a>
+	<br>
 	<a href="createSheduleTrain.jsp" target="content">Create train</a>
 	<br>
 	<a href="sheduleTrain.jsp" target="content">Edit route train</a>
 	<br>
-	<a href="Route.jsp" target="content">Route train</a>
-	<br>
+	
 	<h5>
 		<p style="color: green">Menu for user</p>
 	</h5>
 	<a href="orderTicket.jsp" target="content">Order tickets</a>
 	<br>
-
+	<a href="showOrders.jsp" target="content">Show all orders</a>
+	<br>
+	
 </body>
 </html>

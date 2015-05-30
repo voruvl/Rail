@@ -8,7 +8,7 @@ public class Train {
 	private String firstStation;
 	private String lastStation;
 	private String time;
-	private List<Station> stations=new ArrayList<Station>();
+	private List<Station> stations = new ArrayList<Station>();
 
 	public String getTime() {
 		return time;
@@ -39,6 +39,7 @@ public class Train {
 	public List<Station> getStations() {
 		return stations;
 	}
+
 	public void setFirstStation(String firstStation) {
 		this.firstStation = firstStation;
 	}
@@ -50,7 +51,8 @@ public class Train {
 	public void setLastStation(String lastStation) {
 		this.lastStation = lastStation;
 	}
-	public void addStation(Station station){
+
+	public void addStation(Station station) {
 		stations.add(station);
 	}
 
